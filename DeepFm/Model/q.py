@@ -1,0 +1,203 @@
+import numpy
+import tensorflow as tf
+import numpy as np
+reader = tf.train.NewCheckpointReader('F:\py_project\DeepFmByHai3\Model\model\model-84000')
+all_variables = reader.get_variable_to_shape_map()
+# w1 = reader.get_tensor("Deep-part")
+# print(type(w1))
+# print(w1.shape)
+# print(w1[0])
+
+
+var_to_shape_map = reader.get_variable_to_shape_map()
+for key in var_to_shape_map:
+    print("tensor_name: ", key)
+    #print((reader.get_tensor(key)))
+
+w1 = reader.get_tensor("Variable/Ftrl_1")
+print(type(w1))
+print(w1.shape)
+print(w1[0])
+# numpy.savetxt("w0.txt",w1)
+#
+# w1 = reader.get_tensor("Deep-part/mlp1/weights")
+# print(type(w1))
+# print(w1.shape)
+# print(w1[0])
+# numpy.savetxt("w1.txt",w1)
+#
+# w1 = reader.get_tensor("Deep-part/deep_out/weights")
+# print(type(w1))
+# print(w1.shape)
+# print(w1[0])
+# numpy.savetxt("w5.txt",w1)
+#
+# w1 = reader.get_tensor("Deep-part/mlp3/weights")
+# print(type(w1))
+# print(w1.shape)
+# print(w1[0])
+# numpy.savetxt("w3.txt",w1)
+#
+# w1 = reader.get_tensor("Deep-part/mlp4/weights")
+# print(type(w1))
+# print(w1.shape)
+# print(w1[0])
+# numpy.savetxt("w4.txt",w1)
+#
+#
+# #
+# w1 = reader.get_tensor("Deep-part/mlp0/biases")
+# print(type(w1))
+# print(w1.shape)
+# print(w1[0])
+# numpy.savetxt("b0.txt",w1)
+#
+# w1 = reader.get_tensor("Deep-part/mlp1/biases")
+# print(type(w1))
+# print(w1.shape)
+# print(w1[0])
+# numpy.savetxt("b1.txt",w1)
+#
+# w1 = reader.get_tensor("Deep-part/mlp2/biases")
+# print(type(w1))
+# print(w1.shape)
+# print(w1[0])
+# numpy.savetxt("b2.txt",w1)
+#
+# w1 = reader.get_tensor("Deep-part/mlp3/biases")
+# print(type(w1))
+# print(w1.shape)
+# print(w1[0])
+# numpy.savetxt("b3.txt",w1)
+#
+# w1 = reader.get_tensor("Deep-part/mlp4/biases")
+# print(type(w1))
+# print(w1.shape)
+# print(w1[0])
+# numpy.savetxt("b4.txt",w1)
+#
+# w1 = reader.get_tensor("Deep-part/deep_out/biases")
+# print(type(w1))
+# print(w1.shape)
+# print(w1[0])
+# numpy.savetxt("b5.txt",w1)
+#
+
+
+
+
+
+
+
+
+
+# mm1 = reader.get_tensor("Deep-part/bn_0/moving_mean")
+# print(type(mm1))
+# print(mm1.shape)
+# print(mm1[0])
+# numpy.savetxt("mm1.txt",mm1)
+# mv1 = reader.get_tensor("Deep-part/bn_0/moving_variance")
+# print(type(mv1))
+# print(mv1.shape)
+# print(mv1[0])
+# numpy.savetxt("mv1.txt",mv1)
+#
+# mm2 = reader.get_tensor("Deep-part/bn_1/moving_mean")
+# print(type(mm2))
+# print(mm2.shape)
+# print(mm2[0])
+# numpy.savetxt("mm2.txt",mm2)
+# mv2 = reader.get_tensor("Deep-part/bn_1/moving_variance")
+# print(type(mv2))
+# print(mv2.shape)
+# print(mv2[0])
+# numpy.savetxt("mv2.txt",mv2)
+#
+# mm3 = reader.get_tensor("Deep-part/bn_2/moving_mean")
+# print(type(mm3))
+# print(mm3.shape)
+# print(mm3[0])
+# numpy.savetxt("mm3.txt",mm3)
+# mv3 = reader.get_tensor("Deep-part/bn_2/moving_variance")
+# print(type(mv3))
+# print(mv3.shape)
+# print(mv3[0])
+# numpy.savetxt("mv3.txt",mv3)
+#
+# mm4 = reader.get_tensor("Deep-part/bn_3/moving_mean")
+# print(type(mm4))
+# print(mm4.shape)
+# print(mm4[0])
+# numpy.savetxt("mm4.txt",mm4)
+# mv4 = reader.get_tensor("Deep-part/bn_3/moving_variance")
+# print(type(mv4))
+# print(mv4.shape)
+# print(mv4[0])
+# numpy.savetxt("mv4.txt",mv4)
+#
+# mm5 = reader.get_tensor("Deep-part/bn_4/moving_mean")
+# print(type(mm5))
+# print(mm5.shape)
+# print(mm5[0])
+# numpy.savetxt("mm5.txt",mm5)
+# mv5 = reader.get_tensor("Deep-part/bn_4/moving_variance")
+# print(type(mv5))
+# print(mv5.shape)
+# print(mv5[0])
+# numpy.savetxt("mv5.txt",mv5)
+
+# gamma5 = reader.get_tensor("Deep-part/bn_4/gamma")
+# print(type(gamma5))
+# print(gamma5.shape)
+# print(gamma5[0])
+# numpy.savetxt("gamma5.txt",gamma5)
+# beta5 = reader.get_tensor("Deep-part/bn_4/beta")
+# print(type(beta5))
+# print(beta5.shape)
+# print(beta5[0])
+# numpy.savetxt("beta5.txt",beta5)
+#
+# gamma4 = reader.get_tensor("Deep-part/bn_3/gamma")
+# print(type(gamma4))
+# print(gamma4.shape)
+# print(gamma4[0])
+# numpy.savetxt("gamma4.txt",gamma4)
+# beta4 = reader.get_tensor("Deep-part/bn_3/beta")
+# print(type(beta4))
+# print(beta4.shape)
+# print(beta4[0])
+# numpy.savetxt("beta4.txt",beta4)
+#
+# gamma3 = reader.get_tensor("Deep-part/bn_2/gamma")
+# print(type(gamma3))
+# print(gamma3.shape)
+# print(gamma3[0])
+# numpy.savetxt("gamma3.txt",gamma3)
+# beta3 = reader.get_tensor("Deep-part/bn_2/beta")
+# print(type(beta3))
+# print(beta3.shape)
+# print(beta3[0])
+# numpy.savetxt("beta3.txt",beta3)
+#
+#
+# gamma2 = reader.get_tensor("Deep-part/bn_1/gamma")
+# print(type(gamma2))
+# print(gamma2.shape)
+# print(gamma2[0])
+# numpy.savetxt("gamma2.txt",gamma2)
+# beta2 = reader.get_tensor("Deep-part/bn_1/beta")
+# print(type(beta2))
+# print(beta2.shape)
+# print(beta2[0])
+# numpy.savetxt("beta2.txt",beta2)
+#
+# gamma1 = reader.get_tensor("Deep-part/bn_0/gamma")
+# print(type(gamma1))
+# print(gamma1.shape)
+# print(gamma1[0])
+# numpy.savetxt("gamma1.txt",gamma1)
+# beta1 = reader.get_tensor("Deep-part/bn_0/beta")
+# print(type(beta1))
+# print(beta1.shape)
+# print(beta1[0])
+# numpy.savetxt("beta1.txt",beta1)
